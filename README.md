@@ -2,12 +2,10 @@
 
 > AI-powered DISP compliance assessment for Australian defence SMEs
 
-[![Live Demo](https://img.shields.io/badge/demo-live-10B981?style=for-the-badge)](https://clearance.azurestaticapps.net)
-[![CI](https://img.shields.io/github/actions/workflow/status/YOUR_USERNAME/clearance/ci.yml?style=for-the-badge&label=CI)](https://github.com/YOUR_USERNAME/clearance/actions)
+[![Live Demo](https://img.shields.io/badge/Live_Demo-projectclearance.com.au-10B981?style=for-the-badge)](https://projectclearance.com.au)
 [![Azure](https://img.shields.io/badge/Azure-Deployed-0078D4?style=for-the-badge&logo=microsoftazure)](https://azure.microsoft.com)
 [![License](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)](LICENSE)
 
-<!-- Replace with actual screenshot -->
 ![Dashboard Screenshot](docs/screenshots/dashboard.png)
 
 ---
@@ -115,8 +113,8 @@ See [ADR-002: Consumption Tier Strategy](docs/decisions/002-consumption-tier-str
 
 ```bash
 # Clone repository
-git clone https://github.com/YOUR_USERNAME/clearance.git
-cd clearance
+git clone https://github.com/JunaidAbrar/Azure-Architecture-Clearance.git
+cd Azure-Architecture-Clearance
 
 # Frontend
 cd frontend
@@ -257,8 +255,8 @@ MIT — see [LICENSE](LICENSE) for details.
 
 Masters in Computing and Innovation — University of Adelaide
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=flat-square&logo=linkedin)](https://linkedin.com/in/YOUR_PROFILE)
-[![GitHub](https://img.shields.io/badge/GitHub-Follow-181717?style=flat-square&logo=github)](https://github.com/YOUR_USERNAME)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=flat-square&logo=linkedin)](https://www.linkedin.com/in/junuu/)
+[![GitHub](https://img.shields.io/badge/GitHub-Follow-181717?style=flat-square&logo=github)](https://github.com/JunaidAbrar)
 
 **Certifications:** AZ-900 (Azure Fundamentals) | AZ-204 (In Progress)
 
