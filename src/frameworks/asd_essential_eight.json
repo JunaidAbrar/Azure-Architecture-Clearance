@@ -1,0 +1,149 @@
+{
+  "framework_id": "asd-e8-ml2",
+  "framework_name": "ASD Essential Eight",
+  "version": "2024",
+  "maturity_level": 2,
+  "description": "Australian Signals Directorate Essential Eight cybersecurity mitigation strategies at Maturity Level 2",
+  "total_requirements": 8,
+  "domains": [
+    {
+      "domain_id": "E8",
+      "domain_name": "Essential Eight Controls",
+      "description": "Eight essential mitigation strategies to protect against cyber threats"
+    }
+  ],
+  "requirements": [
+    {
+      "id": "E8-AC",
+      "domain": "Essential Eight Controls",
+      "control_name": "Application Control",
+      "requirement_text": "Application control is implemented on workstations and servers to restrict the execution of executables, software libraries, scripts, installers, compiled HTML, HTML applications and control panel applets to an approved set. Application control rulesets are validated on an annual or more frequent basis.",
+      "maturity_level_2_criteria": [
+        "Application control is implemented on workstations",
+        "Application control is implemented on internet-facing servers",
+        "Application control restricts executables, software libraries, scripts, installers, compiled HTML, HTML applications and control panel applets",
+        "Microsoft's recommended application blocklist is implemented",
+        "Application control rulesets are validated annually"
+      ],
+      "risk_weight": 10,
+      "effort_to_fix": 7,
+      "remediation_template": "template_e8_ac.md"
+    },
+    {
+      "id": "E8-PA",
+      "domain": "Essential Eight Controls",
+      "control_name": "Patch Applications",
+      "requirement_text": "Patches, updates or vendor mitigations for security vulnerabilities in internet-facing services are applied within two weeks of release. Patches, updates or vendor mitigations for security vulnerabilities in office productivity suites, web browsers and their extensions, email clients, PDF software, and security products are applied within one month of release.",
+      "maturity_level_2_criteria": [
+        "Internet-facing services are patched within two weeks",
+        "Office productivity suites are patched within one month",
+        "Web browsers and extensions are patched within one month",
+        "Email clients are patched within one month",
+        "PDF software is patched within one month",
+        "Security products are patched within one month",
+        "Vulnerability scanner is used at least fortnightly"
+      ],
+      "risk_weight": 9,
+      "effort_to_fix": 5,
+      "remediation_template": "template_e8_pa.md"
+    },
+    {
+      "id": "E8-MFA",
+      "domain": "Essential Eight Controls",
+      "control_name": "Multi-Factor Authentication",
+      "requirement_text": "Multi-factor authentication is used to authenticate users to their organisation's online services that process, store or communicate sensitive data. Multi-factor authentication is used to authenticate users to third-party online services that process, store or communicate sensitive data.",
+      "maturity_level_2_criteria": [
+        "MFA is used for VPNs",
+        "MFA is used for RDP and other remote access",
+        "MFA is used for all users when accessing internet-facing services",
+        "MFA is used for third-party services storing sensitive data",
+        "MFA uses either: something users have and know, or something users have that is unlocked by something users know or are"
+      ],
+      "risk_weight": 10,
+      "effort_to_fix": 4,
+      "remediation_template": "template_e8_mfa.md"
+    },
+    {
+      "id": "E8-UAH",
+      "domain": "Essential Eight Controls",
+      "control_name": "User Application Hardening",
+      "requirement_text": "Web browsers are configured to block or disable support for Flash content, web advertisements and Java from the internet. Web browsers are hardened using ASD or vendor hardening guidance.",
+      "maturity_level_2_criteria": [
+        "Web browsers do not process Java from the internet",
+        "Web browsers do not process web advertisements from the internet",
+        "Internet Explorer 11 is disabled or removed",
+        "Web browsers are hardened using ASD/vendor guidance",
+        "Microsoft Office is configured to disable Flash content",
+        "Microsoft Office is hardened using ASD/vendor guidance"
+      ],
+      "risk_weight": 7,
+      "effort_to_fix": 4,
+      "remediation_template": "template_e8_uah.md"
+    },
+    {
+      "id": "E8-RB",
+      "domain": "Essential Eight Controls",
+      "control_name": "Restrict Administrative Privileges",
+      "requirement_text": "Requests for privileged access to systems and applications are validated when first requested. Privileged accounts are prevented from accessing the internet, email and web services. Privileged users use separate privileged and unprivileged operating environments.",
+      "maturity_level_2_criteria": [
+        "Privileged access requests are validated on first request",
+        "Privileged accounts cannot access internet, email, web services",
+        "Privileged users use separate privileged and unprivileged environments",
+        "Unprivileged accounts cannot logon to privileged environments",
+        "Privileged accounts (excluding local admin) cannot logon to unprivileged environments"
+      ],
+      "risk_weight": 9,
+      "effort_to_fix": 6,
+      "remediation_template": "template_e8_rb.md"
+    },
+    {
+      "id": "E8-PO",
+      "domain": "Essential Eight Controls",
+      "control_name": "Patch Operating Systems",
+      "requirement_text": "Patches, updates or vendor mitigations for security vulnerabilities in operating systems of internet-facing services are applied within two weeks of release. Patches, updates or vendor mitigations for security vulnerabilities in operating systems of workstations, servers and network devices are applied within one month of release.",
+      "maturity_level_2_criteria": [
+        "Internet-facing service OS patched within two weeks",
+        "Workstation OS patched within one month",
+        "Server OS patched within one month",
+        "Network device OS/firmware patched within one month",
+        "Operating systems no longer supported by vendors are replaced",
+        "Vulnerability scanner is used at least fortnightly"
+      ],
+      "risk_weight": 9,
+      "effort_to_fix": 5,
+      "remediation_template": "template_e8_po.md"
+    },
+    {
+      "id": "E8-ROM",
+      "domain": "Essential Eight Controls",
+      "control_name": "Microsoft Office Macro Settings",
+      "requirement_text": "Microsoft Office macros are disabled for users who do not have a demonstrated business requirement. Microsoft Office macros in files originating from the internet are blocked. Microsoft Office macro antivirus scanning is enabled.",
+      "maturity_level_2_criteria": [
+        "Microsoft Office macros are disabled for users without business need",
+        "Microsoft Office macros from the internet are blocked",
+        "Microsoft Office macro antivirus scanning is enabled",
+        "Microsoft Office macro security settings cannot be changed by users"
+      ],
+      "risk_weight": 8,
+      "effort_to_fix": 3,
+      "remediation_template": "template_e8_rom.md"
+    },
+    {
+      "id": "E8-RAP",
+      "domain": "Essential Eight Controls",
+      "control_name": "Regular Backups",
+      "requirement_text": "Backups of important data, software and configuration settings are performed and retained in accordance with business continuity requirements. Backups are synchronised to enable restoration to a common point in time. Backups are retained in a secure and resilient manner.",
+      "maturity_level_2_criteria": [
+        "Backups of important data, software, config are performed and retained",
+        "Backups are synchronised to common point in time",
+        "Backups are stored offline or in a manner where they cannot be modified/deleted",
+        "Backups are tested as part of disaster recovery exercises",
+        "Unprivileged accounts cannot access backups of other accounts",
+        "Unprivileged accounts cannot modify or delete backups"
+      ],
+      "risk_weight": 8,
+      "effort_to_fix": 5,
+      "remediation_template": "template_e8_rap.md"
+    }
+  ]
+}

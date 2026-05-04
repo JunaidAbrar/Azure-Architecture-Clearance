@@ -1,0 +1,78 @@
+{
+  "version": "2.0",
+  "description": "Cross-reference mapping between DISP Entry Level and ASD Essential Eight controls",
+  "mappings": {
+    "DISP-IC-001": {
+      "e8_controls": ["E8-AC", "E8-RAP"],
+      "relationship": "direct",
+      "efficiency_note": "IT access controls satisfy both DISP information security and E8 application control requirements"
+    },
+    "DISP-IC-002": {
+      "e8_controls": ["E8-AC", "E8-PA"],
+      "relationship": "direct",
+      "efficiency_note": "Encryption requirements overlap with E8 application patching for secure communications"
+    },
+    "DISP-IC-003": {
+      "e8_controls": ["E8-AC", "E8-PA", "E8-PO"],
+      "relationship": "direct",
+      "efficiency_note": "Malware protection aligns with E8 patching and application control strategies"
+    },
+    "DISP-IC-004": {
+      "e8_controls": ["E8-RAP"],
+      "relationship": "direct",
+      "efficiency_note": "Audit logging directly supports E8 restricted administrative privileges monitoring"
+    },
+    "DISP-SG-006": {
+      "e8_controls": ["E8-UAH"],
+      "relationship": "supportive",
+      "efficiency_note": "Security awareness training supports user application hardening through informed users"
+    },
+    "DISP-SG-013": {
+      "e8_controls": ["E8-AC", "E8-ROM"],
+      "relationship": "supportive",
+      "efficiency_note": "Information handling procedures support application control and Office macro policies"
+    },
+    "DISP-PS-003": {
+      "e8_controls": ["E8-RAP", "E8-MFA"],
+      "relationship": "direct",
+      "efficiency_note": "Security clearance requirements align with E8 privilege restriction and MFA mandates"
+    },
+    "DISP-PS-005": {
+      "e8_controls": ["E8-RAP"],
+      "relationship": "supportive",
+      "efficiency_note": "Personnel change reporting supports privilege review processes"
+    },
+    "DISP-SG-004": {
+      "e8_controls": ["E8-RB"],
+      "relationship": "supportive",
+      "efficiency_note": "Incident reporting supports backup integrity verification processes"
+    }
+  },
+  "e8_to_disp": {
+    "E8-AC": ["DISP-IC-001", "DISP-IC-002", "DISP-IC-003", "DISP-SG-013"],
+    "E8-PA": ["DISP-IC-002", "DISP-IC-003"],
+    "E8-MFA": ["DISP-PS-003"],
+    "E8-UAH": ["DISP-SG-006"],
+    "E8-RAP": ["DISP-IC-001", "DISP-IC-004", "DISP-PS-003", "DISP-PS-005"],
+    "E8-PO": ["DISP-IC-003"],
+    "E8-ROM": ["DISP-SG-013"],
+    "E8-RB": ["DISP-SG-004"]
+  },
+  "efficiency_opportunities": [
+    {
+      "group": "Access Control Bundle",
+      "controls": ["DISP-IC-001", "DISP-PS-003", "E8-AC", "E8-RAP", "E8-MFA"],
+      "description": "Implementing a unified Identity and Access Management (IAM) solution addresses multiple requirements simultaneously"
+    },
+    {
+      "group": "Patch Management Bundle",
+      "controls": ["DISP-IC-003", "E8-PA", "E8-PO"],
+      "description": "A comprehensive patch management program satisfies both DISP malware protection and E8 patching controls"
+    },
+    {
+      "group": "Security Monitoring Bundle",
+      "controls": ["DISP-IC-004", "DISP-SG-004", "E8-RAP"],
+      "description": "Centralized SIEM/logging addresses audit trail, incident detection, and privilege monitoring"
+    }
+  ]
+}

@@ -1,0 +1,255 @@
+{
+  "framework_id": "disp-entry-level",
+  "framework_name": "DISP Entry Level",
+  "version": "2024",
+  "description": "Defence Industry Security Programme Entry Level requirements for Australian defence supply chain participation",
+  "total_requirements": 28,
+  "domains": [
+    {
+      "domain_id": "SG",
+      "domain_name": "Security Governance",
+      "description": "Organisational security management, policies, and oversight"
+    },
+    {
+      "domain_id": "PS",
+      "domain_name": "Personnel Security",
+      "description": "Workforce security screening, awareness, and management"
+    },
+    {
+      "domain_id": "PH",
+      "domain_name": "Physical Security",
+      "description": "Facility and asset protection measures"
+    },
+    {
+      "domain_id": "IC",
+      "domain_name": "Information & Cybersecurity",
+      "description": "Information protection and cyber defence controls"
+    }
+  ],
+  "requirements": [
+    {
+      "id": "DISP-SG-001",
+      "domain": "Security Governance",
+      "requirement_text": "The organisation must have a documented security policy that is approved by senior management and communicated to all personnel.",
+      "risk_weight": 9,
+      "effort_to_fix": 3,
+      "remediation_template": "template_sg_001.md"
+    },
+    {
+      "id": "DISP-SG-002",
+      "domain": "Security Governance",
+      "requirement_text": "The organisation must appoint a Security Officer responsible for implementing and maintaining the security program.",
+      "risk_weight": 9,
+      "effort_to_fix": 2,
+      "remediation_template": "template_sg_002.md"
+    },
+    {
+      "id": "DISP-SG-003",
+      "domain": "Security Governance",
+      "requirement_text": "The organisation must conduct regular security risk assessments to identify threats and vulnerabilities to defence-related information and assets.",
+      "risk_weight": 8,
+      "effort_to_fix": 5,
+      "remediation_template": "template_sg_003.md"
+    },
+    {
+      "id": "DISP-SG-004",
+      "domain": "Security Governance",
+      "requirement_text": "The organisation must maintain a security incidents register and have procedures for reporting security incidents to Defence.",
+      "risk_weight": 8,
+      "effort_to_fix": 3,
+      "remediation_template": "template_sg_004.md"
+    },
+    {
+      "id": "DISP-SG-005",
+      "domain": "Security Governance",
+      "requirement_text": "The organisation must have documented procedures for managing security clearances and ensure only cleared personnel access classified information.",
+      "risk_weight": 9,
+      "effort_to_fix": 4,
+      "remediation_template": "template_sg_005.md"
+    },
+    {
+      "id": "DISP-SG-006",
+      "domain": "Security Governance",
+      "requirement_text": "The organisation must conduct annual security awareness training for all personnel with access to defence information.",
+      "risk_weight": 7,
+      "effort_to_fix": 3,
+      "remediation_template": "template_sg_006.md"
+    },
+    {
+      "id": "DISP-SG-007",
+      "domain": "Security Governance",
+      "requirement_text": "The organisation must have a documented business continuity plan that addresses protection of defence information during disruptions.",
+      "risk_weight": 7,
+      "effort_to_fix": 6,
+      "remediation_template": "template_sg_007.md"
+    },
+    {
+      "id": "DISP-SG-008",
+      "domain": "Security Governance",
+      "requirement_text": "The organisation must maintain an inventory of all defence-related information and assets, including their security classification.",
+      "risk_weight": 8,
+      "effort_to_fix": 5,
+      "remediation_template": "template_sg_008.md"
+    },
+    {
+      "id": "DISP-SG-009",
+      "domain": "Security Governance",
+      "requirement_text": "The organisation must have procedures for secure destruction of classified and sensitive defence information.",
+      "risk_weight": 8,
+      "effort_to_fix": 3,
+      "remediation_template": "template_sg_009.md"
+    },
+    {
+      "id": "DISP-SG-010",
+      "domain": "Security Governance",
+      "requirement_text": "The organisation must conduct due diligence on subcontractors and suppliers who will have access to defence information.",
+      "risk_weight": 8,
+      "effort_to_fix": 5,
+      "remediation_template": "template_sg_010.md"
+    },
+    {
+      "id": "DISP-SG-011",
+      "domain": "Security Governance",
+      "requirement_text": "The organisation must have contractual arrangements with subcontractors that include security obligations equivalent to DISP requirements.",
+      "risk_weight": 8,
+      "effort_to_fix": 4,
+      "remediation_template": "template_sg_011.md"
+    },
+    {
+      "id": "DISP-SG-012",
+      "domain": "Security Governance",
+      "requirement_text": "The organisation must conduct periodic security audits and reviews of its security program effectiveness.",
+      "risk_weight": 7,
+      "effort_to_fix": 5,
+      "remediation_template": "template_sg_012.md"
+    },
+    {
+      "id": "DISP-SG-013",
+      "domain": "Security Governance",
+      "requirement_text": "The organisation must have documented procedures for handling, storing, and transmitting classified information.",
+      "risk_weight": 9,
+      "effort_to_fix": 4,
+      "remediation_template": "template_sg_013.md"
+    },
+    {
+      "id": "DISP-SG-014",
+      "domain": "Security Governance",
+      "requirement_text": "The organisation must maintain records of security briefings and debriefings for personnel with access to defence information.",
+      "risk_weight": 6,
+      "effort_to_fix": 2,
+      "remediation_template": "template_sg_014.md"
+    },
+    {
+      "id": "DISP-PS-001",
+      "domain": "Personnel Security",
+      "requirement_text": "The organisation must verify the identity and right to work of all personnel before granting access to defence information or facilities.",
+      "risk_weight": 9,
+      "effort_to_fix": 2,
+      "remediation_template": "template_ps_001.md"
+    },
+    {
+      "id": "DISP-PS-002",
+      "domain": "Personnel Security",
+      "requirement_text": "The organisation must conduct pre-employment screening including criminal history checks for personnel who will access defence information.",
+      "risk_weight": 9,
+      "effort_to_fix": 3,
+      "remediation_template": "template_ps_002.md"
+    },
+    {
+      "id": "DISP-PS-003",
+      "domain": "Personnel Security",
+      "requirement_text": "The organisation must ensure personnel hold appropriate security clearances before granting access to classified information.",
+      "risk_weight": 10,
+      "effort_to_fix": 4,
+      "remediation_template": "template_ps_003.md"
+    },
+    {
+      "id": "DISP-PS-004",
+      "domain": "Personnel Security",
+      "requirement_text": "The organisation must conduct security induction briefings for all new personnel with access to defence information.",
+      "risk_weight": 7,
+      "effort_to_fix": 2,
+      "remediation_template": "template_ps_004.md"
+    },
+    {
+      "id": "DISP-PS-005",
+      "domain": "Personnel Security",
+      "requirement_text": "The organisation must have procedures for reporting changes in personnel circumstances that may affect their security status.",
+      "risk_weight": 7,
+      "effort_to_fix": 3,
+      "remediation_template": "template_ps_005.md"
+    },
+    {
+      "id": "DISP-PS-006",
+      "domain": "Personnel Security",
+      "requirement_text": "The organisation must conduct security debriefings when personnel with access to defence information leave the organisation.",
+      "risk_weight": 8,
+      "effort_to_fix": 2,
+      "remediation_template": "template_ps_006.md"
+    },
+    {
+      "id": "DISP-PS-007",
+      "domain": "Personnel Security",
+      "requirement_text": "The organisation must maintain records of all personnel security clearances, briefings, and access authorisations.",
+      "risk_weight": 7,
+      "effort_to_fix": 3,
+      "remediation_template": "template_ps_007.md"
+    },
+    {
+      "id": "DISP-PH-001",
+      "domain": "Physical Security",
+      "requirement_text": "The organisation must implement physical access controls to prevent unauthorised access to areas where defence information is stored or processed.",
+      "risk_weight": 9,
+      "effort_to_fix": 6,
+      "remediation_template": "template_ph_001.md"
+    },
+    {
+      "id": "DISP-PH-002",
+      "domain": "Physical Security",
+      "requirement_text": "The organisation must use appropriate security containers or facilities for storing classified defence information when not in use.",
+      "risk_weight": 9,
+      "effort_to_fix": 7,
+      "remediation_template": "template_ph_002.md"
+    },
+    {
+      "id": "DISP-PH-003",
+      "domain": "Physical Security",
+      "requirement_text": "The organisation must maintain visitor management procedures including identification verification, escorts, and access logs.",
+      "risk_weight": 7,
+      "effort_to_fix": 3,
+      "remediation_template": "template_ph_003.md"
+    },
+    {
+      "id": "DISP-IC-001",
+      "domain": "Information & Cybersecurity",
+      "requirement_text": "The organisation must implement access controls to ensure only authorised personnel can access defence information on IT systems.",
+      "risk_weight": 9,
+      "effort_to_fix": 4,
+      "remediation_template": "template_ic_001.md"
+    },
+    {
+      "id": "DISP-IC-002",
+      "domain": "Information & Cybersecurity",
+      "requirement_text": "The organisation must use encryption for electronic storage and transmission of classified or sensitive defence information.",
+      "risk_weight": 9,
+      "effort_to_fix": 5,
+      "remediation_template": "template_ic_002.md"
+    },
+    {
+      "id": "DISP-IC-003",
+      "domain": "Information & Cybersecurity",
+      "requirement_text": "The organisation must implement measures to protect IT systems from malware, including antivirus software and regular updates.",
+      "risk_weight": 8,
+      "effort_to_fix": 3,
+      "remediation_template": "template_ic_003.md"
+    },
+    {
+      "id": "DISP-IC-004",
+      "domain": "Information & Cybersecurity",
+      "requirement_text": "The organisation must maintain audit logs of access to defence information on IT systems and review them regularly.",
+      "risk_weight": 8,
+      "effort_to_fix": 4,
+      "remediation_template": "template_ic_004.md"
+    }
+  ]
+}

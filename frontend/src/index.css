@@ -1,0 +1,140 @@
+/* Import fonts - must be first */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Base styles */
+body {
+  @apply bg-clearance-bg text-clearance-text font-sans antialiased;
+  margin: 0;
+  min-height: 100vh;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+/* Custom scrollbar for dark theme */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-clearance-bg-secondary;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-clearance-border rounded;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-clearance-text-muted;
+}
+
+/* Custom component classes */
+@layer components {
+  .btn-primary {
+    @apply px-6 py-3 bg-clearance-pass text-white font-semibold rounded-lg
+           hover:bg-opacity-90 hover:shadow-lg hover:shadow-clearance-pass/25
+           active:scale-[0.98] transition-all duration-200
+           focus:outline-none focus:ring-2 focus:ring-clearance-pass focus:ring-offset-2 focus:ring-offset-clearance-bg;
+  }
+
+  .btn-secondary {
+    @apply px-6 py-3 bg-clearance-bg-secondary text-clearance-text font-semibold rounded-lg
+           border border-clearance-border hover:border-clearance-text-muted
+           hover:bg-clearance-bg active:scale-[0.98] transition-all duration-200
+           focus:outline-none focus:ring-2 focus:ring-clearance-border;
+  }
+
+  .card {
+    @apply bg-clearance-bg-secondary border border-clearance-border rounded-xl p-6
+           transition-all duration-300 hover:border-clearance-text-muted/50
+           hover:shadow-lg hover:shadow-black/20;
+  }
+
+  .card-interactive {
+    @apply bg-clearance-bg-secondary border border-clearance-border rounded-xl p-6
+           transition-all duration-300 cursor-pointer
+           hover:border-clearance-pass/50 hover:shadow-lg hover:shadow-clearance-pass/10
+           hover:-translate-y-0.5;
+  }
+
+  .card-static {
+    @apply bg-clearance-bg-secondary border border-clearance-border rounded-xl p-6;
+  }
+
+  .input {
+    @apply w-full px-4 py-3 bg-clearance-bg border border-clearance-border rounded-lg
+           text-clearance-text placeholder-clearance-text-muted
+           transition-all duration-200
+           focus:outline-none focus:border-clearance-pass focus:ring-1 focus:ring-clearance-pass
+           focus:shadow-lg focus:shadow-clearance-pass/10;
+  }
+
+  .badge-pass {
+    @apply px-2 py-1 text-xs font-semibold rounded bg-clearance-pass/20 text-clearance-pass;
+  }
+
+  .badge-partial {
+    @apply px-2 py-1 text-xs font-semibold rounded bg-clearance-partial/20 text-clearance-partial;
+  }
+
+  .badge-fail {
+    @apply px-2 py-1 text-xs font-semibold rounded bg-clearance-fail/20 text-clearance-fail;
+  }
+
+  .badge-high {
+    @apply px-2 py-1 text-xs font-semibold rounded bg-clearance-high/20 text-clearance-high;
+  }
+
+  .badge-medium {
+    @apply px-2 py-1 text-xs font-semibold rounded bg-clearance-medium/20 text-clearance-medium;
+  }
+
+  .badge-low {
+    @apply px-2 py-1 text-xs font-semibold rounded bg-clearance-low/20 text-clearance-low;
+  }
+
+  /* Page animations */
+  .page-enter {
+    @apply animate-fade-in;
+  }
+
+  /* Table row hover */
+  .table-row-hover {
+    @apply transition-colors duration-150 hover:bg-clearance-pass/5;
+  }
+}
+
+/* Smooth page transitions */
+@layer utilities {
+  .animate-in {
+    animation: animate-in 0.3s ease-out;
+  }
+
+  @keyframes animate-in {
+    from {
+      opacity: 0;
+      transform: translateY(8px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Staggered children animation */
+  .stagger-children > * {
+    animation: animate-in 0.3s ease-out both;
+  }
+
+  .stagger-children > *:nth-child(1) { animation-delay: 0ms; }
+  .stagger-children > *:nth-child(2) { animation-delay: 50ms; }
+  .stagger-children > *:nth-child(3) { animation-delay: 100ms; }
+  .stagger-children > *:nth-child(4) { animation-delay: 150ms; }
+  .stagger-children > *:nth-child(5) { animation-delay: 200ms; }
+}

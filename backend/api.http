@@ -1,0 +1,89 @@
+# Clearance API - REST Client Test File
+# Use VS Code REST Client extension to run these requests
+# Start local server: uvicorn main:app --reload (in backend directory)
+# Or use Azure Functions: func start
+
+@baseUrl = http://localhost:8000
+
+### Health Check
+GET {{baseUrl}}/health
+
+### Root Endpoint
+GET {{baseUrl}}/
+
+### List Frameworks
+GET {{baseUrl}}/frameworks
+
+### Upload PDF Document
+# @name upload
+POST {{baseUrl}}/upload
+Content-Type: multipart/form-data; boundary=boundary
+
+--boundary
+Content-Disposition: form-data; name="file"; filename="test_policy.pdf"
+Content-Type: application/pdf
+
+%PDF-1.4 mock pdf content for testing
+--boundary--
+
+### Extract Document Text (Phase 3 - Document Intelligence)
+# Use upload_id from previous request
+@uploadId = {{upload.response.body.upload_id}}
+
+POST {{baseUrl}}/extract?upload_id={{uploadId}}
+
+### Analyse Document (Phase 4 - GPT-4o analysis)
+# Replace {{upload_id}} with actual ID from upload response
+
+POST {{baseUrl}}/analyse
+Content-Type: application/json
+
+{
+    "upload_id": "{{uploadId}}",
+    "company_name": "SkyNet Corporation",
+    "framework": "disp-entry-level"
+}
+
+### Get Reports for User
+GET {{baseUrl}}/reports/demo-user
+
+### Get Single Report (replace with actual report_id)
+GET {{baseUrl}}/report/replace-with-report-id
+
+### Update Gap Status (replace with actual IDs)
+PATCH {{baseUrl}}/report/replace-with-report-id/gap/DISP-SG-001
+Content-Type: application/json
+
+{
+    "status": "in_progress"
+}
+
+### Test Invalid Upload (should return 400)
+POST {{baseUrl}}/upload
+Content-Type: multipart/form-data; boundary=boundary
+
+--boundary
+Content-Disposition: form-data; name="file"; filename="test.txt"
+Content-Type: text/plain
+
+This is not a PDF file
+--boundary--
+
+### Test Missing Report (should return 404)
+GET {{baseUrl}}/report/non-existent-id
+
+### Test Invalid Framework (should return 400)
+POST {{baseUrl}}/analyse
+Content-Type: application/json
+
+{
+    "upload_id": "any-id",
+    "company_name": "Test Corp",
+    "framework": "invalid-framework"
+}
+
+### Test Malformed JSON (should return 422)
+POST {{baseUrl}}/analyse
+Content-Type: application/json
+
+{"invalid": json syntax}
